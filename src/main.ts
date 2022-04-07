@@ -13,7 +13,7 @@ async function bootstrap() {
             credentials: true,
             preflightContinue: false,
         },
-        bodyParser: true,
+        bodyParser: false,
     })
     server.use(text())
     await server.listen(8001)
