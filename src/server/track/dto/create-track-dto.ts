@@ -1,5 +1,6 @@
 import {
     IsArray,
+    IsDateString,
     IsNotEmpty,
     IsOptional,
     IsString,
@@ -12,15 +13,14 @@ export class CreateTrackDto implements ITrack {
     @IsNotEmpty()
     event: string
 
-    @IsUrl()
+    @IsUrl({ require_tld: false })
     url: string
 
     @IsString()
     @IsNotEmpty()
     title: string
 
-    @IsString()
-    @IsNotEmpty()
+    @IsDateString()
     ts: Date
 
     @IsArray()

@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { TrackModule } from './track/track.module'
 import { MongooseModule } from '@nestjs/mongoose'
-import { getMongoConfig } from '../configs/mongo.config'
+import { getMongoConfig } from './configs/mongo.config'
 
 @Module({
     imports: [
